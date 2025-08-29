@@ -1,0 +1,60 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root{
+  --water: #34d399;
+  --water-dark: #10b981;
+  --ring: #a7f3d0;
+}
+
+/* Water progress circle */
+.progress-wrap {
+  width: 260px;
+  height: 260px;
+  position: relative;
+  border-radius: 50%;
+  background: radial-gradient(ellipse at center, white 0%, #eafaf3 100%);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.08) inset, 0 8px 16px rgba(0,0,0,0.06);
+}
+
+.progress-ring {
+  position: absolute;
+  inset: -10px;
+  border-radius: 50%;
+  background:
+    conic-gradient(var(--ring) calc(var(--pct)*1%), transparent 0);
+  mask: radial-gradient(circle at center, transparent 77%, #000 78%);
+}
+
+.progress-water {
+  --h: calc(100% - var(--pct)*1%);
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: calc(var(--pct)*1%);
+  background: linear-gradient(180deg, var(--water), var(--water-dark));
+  border-bottom-left-radius: 50%;
+  border-bottom-right-radius: 50%;
+  overflow: hidden;
+}
+
+.wave {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(50% 20% at 50% 100%, rgba(255,255,255,0.6), transparent 70%);
+  animation: wave 4s linear infinite;
+  opacity: .6;
+}
+
+.wave:nth-child(2){ animation-duration: 6s; opacity: .45; }
+.wave:nth-child(3){ animation-duration: 8s; opacity: .3; }
+
+@keyframes wave{
+  0%   { transform: translateX(0) translateY(0); }
+  100% { transform: translateX(-50%) translateY(0); }
+}
