@@ -5,9 +5,9 @@
   "main": "src/index.js",
   "license": "MIT",
   "scripts": {
-    "dev": "nodemon src/index.js",
-    "start": "node src/index.js",
-    "seed": "node src/seed.js"
+    "dev": "nodemon /index.js",
+    "start": "node /index.js",
+    "seed": "node /seed.js"
   },
   "dependencies": {
     "bcryptjs": "^3.0.2",
