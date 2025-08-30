@@ -2,13 +2,13 @@
   "name": "nutripal-server",
   "version": "1.0.0",
   "type": "module",
-  "main": "src/index.js",
+  "main": "index.js",
   "license": "MIT",
   "scripts": {
-    "dev": "nodemon /index.js",
-    "start": "node index.js",
-    "seed": "node /seed.js"
-  },
+  "dev": "nodemon index.js",
+  "start": "node index.js",
+  "seed": "node seed.js"
+},
   "dependencies": {
     "bcryptjs": "^3.0.2",
     "cors": "^2.8.5",

@@ -83,6 +83,10 @@ function authenticateToken(req, res, next) {
   });
 }
 
+app.get("/", (req, res) => {
+  res.redirect("/api/health");
+});
+
 // --- Authentication Routes ---
 app.post("/api/auth/register", async (req, res) => {
   try {
