@@ -7,7 +7,7 @@ import crypto from "crypto";
 import CryptoJS from "crypto-js";
 import bcrypt from "bcryptjs";
 import jwt from "jsonwebtoken";
-import { searchFoods, getFoodById } from "./src/foodDatabase.js";
+import { searchFoods, getFoodById } from "./foodDatabase.js";
 
 dotenv.config();
 
@@ -30,7 +30,7 @@ connectDB().catch((err) => {
 });
 
 // --- Schemas & Models ---
-import { User, Profile, Food, Log } from "./src/models.js";
+import { User, Profile, Food, Log } from "./models.js";
 
 // --- Helpers ---
 function bmi({ heightCm, weightKg }) {

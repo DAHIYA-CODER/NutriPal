@@ -1,4 +1,4 @@
-import dotenv from "dotenv";
+bimport dotenv from "dotenv";
 import mongoose from "mongoose";
 import { Food } from "./models.js";
 
